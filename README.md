@@ -194,3 +194,7 @@ Testing edge cases showed me where the system's simplicity becomes a problem. It
 
 ![Missing Genre output](images/output_missing_genre.png)
 
+## Example Output
+
+![CLI Output](images/output.png)
+
