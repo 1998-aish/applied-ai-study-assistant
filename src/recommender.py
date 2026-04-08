@@ -48,8 +48,7 @@ class Recommender:
 
 def load_songs(csv_path: str) -> List[Dict]:
     """
-    Loads songs from a CSV file.
-    Required by src/main.py
+    Load songs from a CSV file and return a list of dictionaries with proper data types.
     """
     songs = []
     with open(csv_path, newline="", encoding="utf-8") as f:
@@ -71,21 +70,20 @@ def load_songs(csv_path: str) -> List[Dict]:
 
 def score_song(user_prefs: Dict, song: Dict) -> Tuple[float, List[str]]:
     """
-    Scores a single song against user preferences.
-    Required by recommend_songs() and src/main.py
+    Compute a weighted score and explanation for how well a song matches user preferences.
     """
     score = 0.0
     reasons = []
 
     if song["genre"] == user_prefs["preferred_genre"]:
-        score += 2.0
-        reasons.append("genre match (+2.0)")
+        score += 1.0
+        reasons.append("genre match (+1.0)")
 
     if song["mood"] == user_prefs["preferred_mood"]:
         score += 1.0
         reasons.append("mood match (+1.0)")
 
-    energy_sim = (1 - abs(song["energy"] - user_prefs["preferred_energy"])) * 2.0
+    energy_sim = (1 - abs(song["energy"] - user_prefs["preferred_energy"])) * 4.0
     score += energy_sim
     reasons.append(f"energy similarity (+{energy_sim:.1f})")
 
@@ -97,8 +95,7 @@ def score_song(user_prefs: Dict, song: Dict) -> Tuple[float, List[str]]:
 
 def recommend_songs(user_prefs: Dict, songs: List[Dict], k: int = 5) -> List[Tuple[Dict, float, str]]:
     """
-    Functional implementation of the recommendation logic.
-    Required by src/main.py
+    Rank songs by relevance and return the top k recommendations with scores and reasons.
     """
     scored = [
         {"song": song, "score": score, "reasons": reasons}
