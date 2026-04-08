@@ -9,3 +9,11 @@ id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
 8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22
 9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78
 10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35
+11,Moonlit Sonata,Clara Voss,classical,romantic,0.31,68,0.78,0.22,0.97
+12,Bassline Surge,DJ Kratel,EDM,energetic,0.95,140,0.62,0.91,0.04
+13,Dusty Roads,Remy Hale,country,nostalgic,0.52,96,0.73,0.64,0.76
+14,Velvet Night,Asha Monroe,R&B,romantic,0.58,102,0.85,0.76,0.44
+15,Delta Blues,Hound Carter,blues,dark,0.44,84,0.38,0.51,0.83
+16,Requiem for Stars,Ember Strings,classical,dark,0.25,62,0.21,0.18,0.95
+17,Golden Harvest,The Sunbelt,country,uplifting,0.67,112,0.88,0.72,0.65
+18,Aurora Drop,Solstice,EDM,uplifting,0.89,128,0.76,0.87,0.06
