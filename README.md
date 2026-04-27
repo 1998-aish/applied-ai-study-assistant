@@ -151,6 +151,11 @@ system values. That is the most important thing I learned.
 
 ---
 
+## Demo Walkthrough
+🎥 https://www.loom.com/share/9335bc675fe248b7a25ef1beb84fb24b?t=216
+
+---
+
 ## Limitations
 - Catalog only has 18 songs
 - Energy weight dominates scoring
