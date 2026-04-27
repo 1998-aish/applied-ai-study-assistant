@@ -107,10 +107,28 @@ pytest tests/
 - Missing genres trigger a warning message
 - AI fallback defaults if JSON parsing fails
 
+
 ---
 
-## Demo
-🎥 [Loom walkthrough coming soon]
+## Testing & Reliability Results
+
+**8 out of 8 tests passed in 1.53s**
+
+| Test | Result |
+|---|---|
+| Recommender returns songs sorted by score | ✅ Passed |
+| Explanation returns non-empty string | ✅ Passed |
+| Same input gives same genre | ✅ Passed |
+| High energy request → energy > 0.7 | ✅ Passed |
+| Chill request → energy < 0.5 | ✅ Passed |
+| Always returns 5 songs | ✅ Passed |
+| All scores are positive | ✅ Passed |
+| Top song has highest score | ✅ Passed |
+
+**Summary:** All 8 tests passed consistently. The AI correctly 
+detects high/low energy from plain English. The recommender 
+always returns sorted, positive-scored results. No failures observed 
+across multiple test runs.
 
 ---
 
