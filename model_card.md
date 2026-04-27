@@ -110,3 +110,45 @@ or deployment in a real music application.
 3. Expand catalog beyond 18 songs
 4. Add diversity rule — no same artist twice in top 5
 5. Add memory so the system learns from past sessions
+
+---
+
+---
+
+## 9. Reflection and Ethics
+
+### What are the limitations or biases in your system?
+The biggest limitation is the small catalog of only 18 songs. This means
+the same songs appear repeatedly across different user profiles, creating
+a filter bubble. The energy weight (4.0 out of 7.5) dominates scoring,
+so high-energy songs like "Gym Hero" appear in almost every energetic
+profile regardless of genre. Genre and mood matching is binary — there
+is no partial credit for similar genres like lofi and ambient.
+
+### Could your AI be misused, and how would you prevent that?
+The system is low-risk since it only recommends music. However, the AI
+parsing step could be manipulated with unusual inputs to return wrong
+genre/mood values. To prevent this, the code includes a fallback default
+if the AI returns invalid JSON. In a real application, input validation
+and rate limiting would be added to prevent abuse.
+
+### What surprised you while testing reliability?
+The AI was more consistent than expected — it returned the same genre
+for identical inputs every time. What was surprising was how confidently
+it assigned energy values. For "intense workout music" it returned
+energy=1.0 (maximum), and for "calm sleep music" it returned energy=0.2.
+The AI understood the emotional context of words like "intense" and
+"calm" without being explicitly told what energy means numerically.
+
+### AI Collaboration
+**Helpful suggestion:** When switching from Anthropic to Groq, Claude
+suggested the complete updated code for `ai_assistant.py` including
+the JSON parsing and fallback logic. This saved significant time and
+worked correctly on the first try.
+
+**Flawed suggestion:** Claude initially suggested using
+`model="llama3-8b-8192"` for Groq, but this model had been
+decommissioned. The code ran but returned a 400 error. I had to
+manually check the Groq documentation and update it to
+`llama-3.3-70b-versatile`. This showed that AI suggestions can be
+outdated and always need to be verified.
