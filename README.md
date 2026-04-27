@@ -132,6 +132,25 @@ across multiple test runs.
 
 ---
 
+---
+
+## Portfolio Reflection
+
+**GitHub:** https://github.com/1998-aish/applied-ai-study-assistant
+
+**What this project says about me as an AI engineer:**
+This project shows that I can take a working system and extend it
+responsibly into a full AI application. I learned that building with
+AI is not just about making something that works — it's about making
+something that is explainable, testable, and honest about its
+limitations. I debugged real API failures, switched between three
+different AI providers, wrote reliability tests, and documented every
+design decision. I now understand that the weights in a scoring formula
+are not just numbers — they are design choices that encode what the
+system values. That is the most important thing I learned.
+
+---
+
 ## Limitations
 - Catalog only has 18 songs
 - Energy weight dominates scoring
